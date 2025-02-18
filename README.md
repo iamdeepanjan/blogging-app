@@ -1,7 +1,7 @@
-# Blogging Application
+# Blogging Application (BlogNest) - A Modern Blogging Platform
 
 ## Overview
-This is a full-stack blogging application built using **Angular** and **Spring Boot**. The application allows users to **register, log in, create blogs, like blogs, and view other users' blogs**. Authentication is managed using **JWT tokens**, and the UI is developed using **Angular Material** for a modern look and feel.
+This is a full-stack blogging application built using **Angular** and **Spring Boot**. The application allows users to **register, log in, create blogs, like blogs, and view other users' blogs**. Authentication is managed using **JWT tokens**, and the UI is developed using **Angular Material** for a modern look and feel. BlogNest is a feature-rich blogging platform. BlogNest provides a seamless and engaging experience for both writers and readers.
 
 ## Features
 ### **User Authentication**
@@ -13,6 +13,10 @@ This is a full-stack blogging application built using **Angular** and **Spring B
 - View all blogs from different users
 - View only the blogs created by the logged-in user
 
+### **Comment System**
+- Engage with content by commenting on blog posts.
+- You can delete your blog's comments.
+
 ### **User Engagement**
 - Like and unlike blogs
 - View the number of likes on each blog
@@ -20,6 +24,10 @@ This is a full-stack blogging application built using **Angular** and **Spring B
 ### **Security**
 - JWT authentication for secure access
 - Role-based access control (Admin/User)
+
+### **Morder UI**
+- Designed with Angular Material for an intuitive and user-friendly experience.
+- Efficiently browse blog posts using pagination features.
 
 ## Tech Stack
 ### **Frontend:**
@@ -29,10 +37,10 @@ This is a full-stack blogging application built using **Angular** and **Spring B
 - HTML/CSS
 
 ### **Backend:**
-- Spring Boot
+- Spring Boot (Java)
 - Spring Security (JWT Authentication)
-- MySQL Database
-- JPA/Hibernate
+- MySQL Database (Database)
+- JPA/Hibernate (ORM)
 
 ## Installation and Setup
 ### **1. Backend Setup (Spring Boot)**
@@ -103,9 +111,7 @@ This is a full-stack blogging application built using **Angular** and **Spring B
 | POST   | `/likes/{blogid}`| Like a blog                        |
 
 ## Future Enhancements
-- **Comment System:** Allow users to comment on blogs.
 - **Category Tags:** Filter blogs based on categories.
-- **Pagination:** Improve performance with paginated results.
 - **Email Notifications:** Notify users about new likes and comments.
 
 ## Contributing
