@@ -1,0 +1,95 @@
+mat-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-header {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+mat-card-title {
+  text-transform: uppercase;
+}
+mat-form-field {
+  width: 100%;
+}
+
+button.mat-raised-button {
+  width: 100%;
+}
+
+mat-error {
+  font-size: 12px;
+  color: #f44336;
+  // text-align: center;
+}
+
+mat-card-actions {
+  margin-top: auto; /* Push the actions to the bottom */
+  display: flex;
+  justify-content: center; /* Center the login button */
+  padding: 6px 0;
+}
+mat-card-content {
+  margin-bottom: 16px; /* Add space between content and footer */
+}
+mat-card-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 3px;
+}
+
+.form-container {
+  height: 200px;
+}
+
+.full-width {
+  width: 100%; /* Make the button span the full width of the parent */
+  text-align: center; /* Center the button's text */
+  height: 45px;
+  font-size: 18px;
+}
+
+mat-card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #757575; /* Neutral text color */
+}
+
+mat-card-footer span {
+  margin-right: 8px; /* Spacing between text and link */
+}
+
+mat-card-footer a {
+  color: #3f51b5; /* Primary color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+mat-card-footer a:hover {
+  text-decoration: underline; /* Underline link on hover */
+  color: #303f9f; /* Darker shade of primary color on hover */
+}

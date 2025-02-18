@@ -1,0 +1,72 @@
+mat-card {
+  margin: 20px 50px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+mat-card-header {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+mat-card-title {
+  text-transform: uppercase;
+}
+mat-form-field {
+  width: 100%;
+}
+
+button.mat-raised-button {
+  width: 100%;
+}
+
+mat-error {
+  font-size: 12px;
+  color: #f44336;
+  // text-align: center;
+}
+
+mat-card-actions {
+  margin-top: auto; /* Push the actions to the bottom */
+  display: flex;
+  justify-content: center; /* Center the submit button */
+  padding: 6px 0;
+}
+mat-card-content {
+  margin-bottom: 16px; /* Add space between content and footer */
+}
+mat-card-title {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 3px;
+}
+
+.form-container {
+  height: auto;
+}
+
+.full-width {
+  width: 100%; /* Make the button span the full width of the parent */
+  text-align: center; /* Center the button's text */
+  height: 45px;
+  font-size: 18px;
+}
+
+textarea {
+  height: 200px;
+}

@@ -1,0 +1,20 @@
+<div class="profile">
+  <h2>Welcome {{ user.name }}</h2>
+  <p>
+    Welcome to BlogNest, a dynamic and engaging blogging platform designed for
+    passionate writers and readers. BlogNest allows users to create, manage, and
+    explore a wide range of blogs on various topics. With an intuitive interface
+    powered by Angular and a robust backend built with Spring Boot, BlogNest
+    ensures a seamless and secure blogging experience. Users can write, edit,
+    and delete blogs, engage with content by liking posts, and manage their
+    profiles effortlessly. The platform features JWT-based authentication,
+    ensuring data security and user privacy. With a clean and modern UI built
+    using Angular Material, BlogNest offers an elegant reading and writing
+    experience. Whether you're here to share your thoughts, explore insightful
+    content, or interact with like-minded individuals, BlogNest is your go-to
+    blogging hub. Start your blogging journey today!
+  </p>
+  <p>Your username or email is {{ user.username }}</p>
+  <p>Do you want to change your password?</p>
+  <button class="password-btn" routerLink="/change-password">Change password</button>
+</div>

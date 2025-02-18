@@ -1,0 +1,13 @@
+<div class="comments-container">
+  <h3>Comments</h3>
+  <div class="comment-form">
+    <app-add-comment [blogId]="blogId"/>
+  </div>
+
+  @for(comment of comments; track comment.id){
+  <div class="comment">
+    <p class="comment-username">{{ comment.user.username.split("@")[0] | titlecase }}: </p>
+    <p class="comment-content">{{ comment.comment }}</p>
+  </div>
+  }
+</div>

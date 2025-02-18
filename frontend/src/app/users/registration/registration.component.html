@@ -1,0 +1,117 @@
+<mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form
+        [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()"
+        class="form-container"
+      >
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              type="text"
+              id="name"
+              formControlName="name"
+              placeholder="Enter your name"
+            />
+            @if(registerForm.get('name')?.touched &&
+            registerForm.get('name')?.invalid){
+            <mat-error> Name is required </mat-error>
+            }
+          </mat-form-field>
+        </div>
+  
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              id="email"
+              formControlName="username"
+              placeholder="Enter your email"
+            />
+            @if(registerForm.get('username')?.touched &&
+            registerForm.get('username')?.invalid){
+            <mat-error> A valid email is required </mat-error>
+            }
+          </mat-form-field>
+        </div>
+  
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              [type]="hide() ? 'password' : 'text'"
+              id="password"
+              formControlName="password"
+              placeholder="Enter your password"
+            />
+            @if(registerForm.get('password')?.touched &&
+            registerForm.get('password')?.invalid){
+            <mat-error> Password is required (min 6 characters) </mat-error>
+            }
+            <button
+              type="button"
+              mat-icon-button
+              matSuffix
+              (click)="clickEvent($event)"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide()"
+            >
+              <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input
+              matInput
+              type="password"
+              [type]="hide() ? 'password' : 'text'"
+              id="confirmPassword"
+              formControlName="confirmPassword"
+              placeholder="Re-enter your password"
+            />
+            @if(registerForm.get('confirmPassword')?.touched &&
+            registerForm.hasError('passwordsMismatch')){
+              <mat-error> Passwords do not match </mat-error>
+            }
+            <button
+            type="button"
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+          </mat-form-field>
+        </div>
+  
+        <mat-error>{{ error }}</mat-error>
+  
+        <mat-card-actions>
+          <button
+            mat-flat-button
+            type="submit"
+            [disabled]="registerForm.invalid"
+            class="full-width"
+          >
+            Register
+          </button>
+          <div class="footer">
+            <span>Already have an account?</span><a routerLink="/login">Login</a>
+          </div>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>

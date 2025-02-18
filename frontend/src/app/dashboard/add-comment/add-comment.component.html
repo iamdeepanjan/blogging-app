@@ -1,0 +1,10 @@
+<form class="form">
+  <mat-form-field class="comment">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="newComment" [ngModelOptions]="{standalone: true}"></textarea>
+  </mat-form-field>
+  <button mat-fab extended (click)="addComment()">
+    <mat-icon>comment</mat-icon>
+    Comment
+  </button>
+</form>

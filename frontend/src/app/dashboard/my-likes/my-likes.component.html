@@ -1,0 +1,53 @@
+@if(blogs.length !== 0){
+<div class="grid-container">
+  <mat-grid-list [cols]="cols" rowHeight="330px">
+    @for(blog of displayedblogs; track blog.id){
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-card class="mat-card">
+        <mat-card-header class="mat-card-header">
+          <mat-card-title class="mat-card-title">
+            <div>{{ blog.title }}</div>
+          </mat-card-title>
+          <mat-card-subtitle class="mat-card-subtitle">
+            <div>
+              <span>- by </span
+              >{{ blog.user.name | titlecase }}
+            </div>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="mat-card-content">
+          <div>
+            {{
+              blog.content.length > 100
+                ? (blog.content | slice : 0 : 100) + "..."
+                : blog.content
+            }}
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-fab class="favorite-icon" (click)="toggleLike(blog.id!)">
+            <mat-icon>favorite</mat-icon><span>{{ likes[blog.id!] || 0 }}</span>
+          </button>
+          <button mat-raised-button (click)="goToMyBlog(blog.id)">
+            Expand<mat-icon>expand_content</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    }
+  </mat-grid-list>
+</div>
+} @else {
+<div class="no-blogs">
+  <h2>No Likes found</h2>
+  <p>You have not liked any blogs yet. You can check others blogs</p>
+  <button class="add-blog-btn" routerLink="/all-blogs">All Blogs</button>
+</div>
+}
+<mat-paginator
+  [length]="blogs.length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="[6, 18, 30]"
+  aria-label="Select page"
+>
+</mat-paginator>
